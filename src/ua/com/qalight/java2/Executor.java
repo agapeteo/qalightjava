@@ -1,6 +1,7 @@
 package ua.com.qalight.java2;
 
 import java.util.Arrays;
+import java.util.Calendar;
 import java.util.List;
 
 /**
@@ -9,17 +10,30 @@ import java.util.List;
 public class Executor {
 
     public static void main(String[] args) {
-        Executor executor = new Executor();
-        Swimable dog = new Dog();
-        Swimable cat = new Cat();
-        Swimable fish = new Fish();
+        Executor e = new Executor();
+        Animal dog = new Dog();
+        Animal cat = new Cat();
+        e.printMe(dog);
+        e.printMe(cat);
+    }
 
-        List<Swimable> list = Arrays.asList(dog, cat, fish);
+      void printMe(){
+        System.out.println("this is void method");
+    }
 
-        for (Swimable each : list) {
-            executor.swim(each);
-        }
+     void printMe(Animal i){
+         if (i instanceof Cat){
+             System.out.println("wow, this is cat!! ");
+         }
+        System.out.println("this is animal " + i);
+    }
 
+     void printMe(Cat s){
+        System.out.println("this is cat " + s);
+    }
+
+     void printMe(Dog o){
+        System.out.println("this is dog " + o);
     }
 
     private void swim(Swimable swimable) {
