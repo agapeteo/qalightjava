@@ -1,23 +1,92 @@
 package ua.com.qalight.java2;
 
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.List;
+import junit.framework.Assert;
+import org.junit.Test;
+
+import java.util.*;
+
+import static junit.framework.Assert.assertEquals;
+import static junit.framework.Assert.assertTrue;
 
 /**
  * Created by emix on 3/28/14.
  */
 public class Executor {
 
-    public static void main(String[] args) {
-        Executor e = new Executor();
-        Animal dog = new Dog();
-        Animal cat = new Cat();
-        e.printMe(dog);
-        e.printMe(cat);
+
+
+
+
+
+    List<String> removeInvalidNames(List<String> names) {
+        String[] exceptions = {"-", "," };
+        List<String> result = new ArrayList<String>(names);
+
+        for (String str : names) {
+            for (String exception : exceptions){
+                if (str.contains(exception)) {
+                    result.remove(str);
+                }
+            }
+        }
+
+        return result;
     }
 
-      void printMe(){
+
+    @Test
+    public void testRemoveInvalidNames() {
+        // given
+        List<String> example = Arrays.asList("Саша", "Са---ша", "Миша,");
+        List<String> expected = Arrays.asList("Саша");
+
+        // when
+        List<String> actual = removeInvalidNames(example);
+        System.out.println("actual = " + Arrays.toString(actual.toArray()));
+
+        // then
+        assertTrue(Arrays.equals(actual.toArray(), expected.toArray()));
+    }
+
+    @Test
+    public void testNamesCounter() {
+        printNamesCounter(
+                Arrays.asList("Вася", "Коля", "Петя", "Вася", "Петя", "Вася",
+                        "Коля", "Вася", "Петя", "Коля", "Вася" ));
+    }
+
+    void printNamesCounter(List<String> names){
+        Map<String, Integer> counter = new HashMap<String, Integer>();
+
+        for (String eachName : names) {
+            Integer foundValue = counter.get(eachName);
+            if (foundValue == null) {
+                counter.put(eachName, 1);
+            } else {
+                counter.put(eachName, ++foundValue);
+            }
+        }
+
+        System.out.println(counter);
+
+    }
+
+    public Map<String, String> getPhoneNumberByName(String name) {
+        Map<String, String> result = new HashMap<String, String>();
+
+        // todo: implement
+        return result;
+    }
+
+
+
+
+    void printAnimalName(Animal animal) {
+        System.out.println("animal's name is " + animal.getName());
+    }
+
+
+    void printMe(){
         System.out.println("this is void method");
     }
 
