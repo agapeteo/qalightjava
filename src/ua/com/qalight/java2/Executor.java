@@ -55,6 +55,20 @@ public class Executor {
                         "Коля", "Вася", "Петя", "Коля", "Вася" ));
     }
 
+    @Test(expected = NumberFormatException.class)
+    public void testParsingWrongIntDouble() {
+        // this example how Integer can be created (not related to method name)
+        Integer number = new Integer(0);
+        Integer number2 = Integer.valueOf(0);
+        Integer number3 = 0;
+        Integer number4 = Integer.parseInt("0");
+        Integer number5 = new Integer("0");
+        int number6 = 0;
+
+        Integer i = Integer.parseInt("345.45");
+        System.out.println(i);
+    }
+
     void printNamesCounter(List<String> names){
         Map<String, Integer> counter = new HashMap<String, Integer>();
 
