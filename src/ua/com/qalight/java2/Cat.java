@@ -1,16 +1,31 @@
 package ua.com.qalight.java2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by emix on 3/28/14.
  */
 public class Cat extends Animal implements Swimable, Comparable {
-
-    public Cat() {
-        this("no name");
+    static{
+        System.out.println("static init in Cat");
     }
 
+    private final List list;
+
+
     public Cat(String name) {
-        this.name = name;
+        super(name, 0);
+        list = new ArrayList();
+    }
+
+    public Cat() {
+        super();
+        System.out.println("constructor in cat begin");
+
+        list = new ArrayList();
+
+        System.out.println("constructor in cat end");
     }
 
     @Override
