@@ -1,7 +1,6 @@
 package ua.com.qalight.java2;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by emix on 3/28/14.
