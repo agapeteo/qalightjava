@@ -1,4 +1,4 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.tasks;
 
 import java.util.Arrays;
 import java.util.HashSet;

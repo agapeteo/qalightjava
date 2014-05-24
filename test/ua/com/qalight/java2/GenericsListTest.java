@@ -1,10 +1,12 @@
 package ua.com.qalight.java2;
 
 import org.junit.Test;
+import ua.com.qalight.java2.zoo.Animal;
+import ua.com.qalight.java2.zoo.Cat;
+import ua.com.qalight.java2.zoo.Dog;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 

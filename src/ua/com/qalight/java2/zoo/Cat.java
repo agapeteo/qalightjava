@@ -1,4 +1,4 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.zoo;
 
 import java.util.*;
 
@@ -28,7 +28,7 @@ public class Cat extends Animal implements Swimable, Comparable {
     }
 
     @Override
-    protected void voice(){
+    public void voice(){
         System.out.println("May! ");
     }
 

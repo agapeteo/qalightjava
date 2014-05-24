@@ -1,4 +1,4 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.zoo;
 
 
 /**
@@ -17,7 +17,7 @@ public class Dog extends Animal implements Swimable {
     }
 
     @Override
-    protected void voice(){
+    public void voice(){
         System.out.println("Bark! ");
     }
 

@@ -1,4 +1,4 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.zoo;
 
 /**
  * Created by emix on 3/28/14.
@@ -35,7 +35,7 @@ public class Animal {
     }
 
 
-    protected void voice(){
+    public void voice(){
         System.out.println("this is my voice");
     }
 

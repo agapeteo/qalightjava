@@ -1,4 +1,4 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.tasks;
 
 import org.junit.Test;
 

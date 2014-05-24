@@ -1,4 +1,4 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.generics;
 
 /**
  * Created by emix on 5/10/14.

@@ -1,11 +1,10 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.zoo;
 
-import junit.framework.Assert;
 import org.junit.Test;
+import ua.com.qalight.java2.company.Person;
 
 import java.util.*;
 
-import static junit.framework.Assert.assertEquals;
 import static junit.framework.Assert.assertTrue;
 
 /**

@@ -1,8 +1,7 @@
-package ua.com.qalight.java2;
+package ua.com.qalight.java2.zoo;
 
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class CollectionsAndArraysExample {

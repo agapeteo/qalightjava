@@ -1,5 +1,8 @@
 package ua.com.qalight.java2;
 
+import ua.com.qalight.java2.zoo.Animal;
+import ua.com.qalight.java2.zoo.Cat;
+
 /**
  * Created by emix on 5/10/14.
  */
